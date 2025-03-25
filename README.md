@@ -22,12 +22,14 @@ This library allows you to send structured audit messages (like `EntityAudit`) t
 
 ### 🔸 ActiveMQ Artemis
 ```bash
-docker run -d --name artemis-broker \
-  -e ARTEMIS_USERNAME=admin \
-  -e ARTEMIS_PASSWORD=admin \
+docker run -d \
+  --name artemis \
   -p 61616:61616 \
   -p 8161:8161 \
-  apache/activemq-artemis
+  -e ARTEMIS_USER=admin \
+  -e ARTEMIS_PASSWORD=admin \
+  -e ANONYMOUS_LOGIN=false \
+  apache/activemq-artemis:latest
 ```
 
 - Web Console: http://localhost:8161  

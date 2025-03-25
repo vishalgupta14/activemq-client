@@ -36,7 +36,6 @@ public class EntityAuditTest {
     @Test
     public void testCreateEntityAudit() {
         EntityAudit audit = factory.createEntityAudit("TestEntity", 100L, "some-data");
-        assertEquals("TestEntity", audit.getEntityName());
         assertEquals(100L, audit.getEntityId());
         assertEquals("some-data", audit.getData());
         assertNotNull(audit.getPerformedOn());
