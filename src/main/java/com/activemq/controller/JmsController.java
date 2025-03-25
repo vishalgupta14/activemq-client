@@ -19,6 +19,7 @@ public class JmsController {
         this.messageService = messageService;
     }
 
+    //curl -X POST http://localhost:9094/jms/send
     @PostMapping("/send")
     public String sendMessage() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
