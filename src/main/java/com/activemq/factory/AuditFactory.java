@@ -10,7 +10,6 @@ public class AuditFactory {
 
     public EntityAudit createEntityAudit(String entityName, Long entityId, String data) {
         return new EntityAudit()
-                .setEntityName(entityName)
                 .setEntityId(entityId)
                 .setData(data)
                 .setPerformedOn(new Date());
